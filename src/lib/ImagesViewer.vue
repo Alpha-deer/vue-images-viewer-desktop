@@ -333,6 +333,27 @@ export default {
 </script>
 
 <style scoped lang="less">
+
+/* flex兼容性S */
+.flex-box{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-wrap: wrap;
+}
+.flex-space-between{
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+}
+.flex-center{
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+/* flex兼容性E */
+
 .unselect {
   -webkit-user-select: none;
   -moz-user-select: none;
