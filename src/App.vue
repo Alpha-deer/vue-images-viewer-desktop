@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <div @click="viewImage($event)">
-      <img v-for="(item, index) in imgList" class="image" :idx="index" :src="item.thumnbnail" />
+      <img v-for="(item, index) in imglist" class="image" :key="index" :idx="index" :src="item.thumnbnail" />
     </div>
   </div>
 </template>
@@ -11,26 +11,20 @@ export default {
   name: "app",
   data() {
     return {
-      imgList: [
+      imglist: [
         {
           thumnbnail: "https://gdttest.wqc.so/uploads/designCenter/mainImage/dumbo-005_15832913844641_15911871057978.jpg!250-250",
-          picture_address: "https://gdttest.wqc.so/uploads/designCenter/mainImage/dumbo-005_15832913844641_15911871057978.jpg",
-          url: "https://gdttest.wqc.so/",
-          share_address: "https://gdttest.wqc.so/",
+          naturalsrc: "https://gdttest.wqc.so/uploads/designCenter/mainImage/dumbo-005_15832913844641_15911871057978.jpg",
           name: "测试图片一.jpg"
         },
         {
           thumnbnail: "https://gdttest.wqc.so/uploads/designCenter/mainImage/hahahahahahahhahahhahahahahha_15915763141386.jpg!250-250",
-          picture_address: "https://gdttest.wqc.so/uploads/designCenter/mainImage/hahahahahahahhahahhahahahahha_15915763141386.jpg",
-          url: "https://gdttest.wqc.so/",
-          share_address: "https://gdttest.wqc.so/",
+          naturalsrc: "https://gdttest.wqc.so/uploads/designCenter/mainImage/hahahahahahahhahahhahahahahha_15915763141386.jpg",
           name: "测试图片二.jpg"
         },
         {
           thumnbnail: "https://gdttest.wqc.so/uploads/designCenter/mainImage/%E5%B8%8C%E7%B2%89%E8%8A%82_15899665366964_15911727718771.jpg!250-250",
-          picture_address: "https://gdttest.wqc.so/uploads/designCenter/mainImage/%E5%B8%8C%E7%B2%89%E8%8A%82_15899665366964_15911727718771.jpg",
-          url: "https://gdttest.wqc.so/",
-          share_address: "https://gdttest.wqc.so/",
+          naturalsrc: "https://gdttest.wqc.so/uploads/designCenter/mainImage/%E5%B8%8C%E7%B2%89%E8%8A%82_15899665366964_15911727718771.jpg",
           name: "测试图片三.jpg"
         },
       ]
@@ -38,7 +32,7 @@ export default {
   },
   methods: {
     viewImage(e) {
-      this.$imageViewer(e, this.imgList);
+      this.$imageViewer(e, this.imglist);
     }
   }
 };

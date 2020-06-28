@@ -166,19 +166,18 @@ ImageViewer.install = Vue => {
 
     // 挂载触发方法
     Vue.prototype.$imageViewer = (e, img_list) => {
-        // console.log("imageViewer", data);
         // console.log(e.currentTarget.getAttribute(''), 'e.currentTarget');
         // console.log(e.target.getAttribute('idx'), 'e.target');
-        // instance.currentSrc = e.currentTarget.currentSrc;
         if(e.target.nodeName === "IMG" && e.target.getAttribute("idx")) {
             instance.visible = true;
             const index = Number( e.target.getAttribute("idx") )
             instance.image_list = img_list;
             instance.current_index = index;
-            instance.currentSrc = img_list[index].picture_address;
-            instance.image_name = img_list[index].name;
-            instance.url = img_list[index].url;
-            instance.share_address = img_list[index].share_address;
+
+            // instance.currentSrc = img_list[index].picture_address;
+            // instance.image_name = img_list[index].name;
+            // instance.url = img_list[index].url;
+            // instance.share_address = img_list[index].share_address;
         }
     }
 
