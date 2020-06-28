@@ -1,3 +1,3 @@
-# vue-images-viewer-desktop
+# vue-image-viewer
 
 # vue图片浏览器
